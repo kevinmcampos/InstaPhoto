@@ -17,16 +17,12 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    UIViewController *feedViewController = [[UIViewController alloc] init];
-    feedViewController.title = @"Feed";
-    feedViewController.view.backgroundColor = [UIColor blueColor];
+    self.feedViewController = [[FeedViewController alloc] init];
     
-    UIViewController *favoritesViewController = [[UIViewController alloc] init];
-    favoritesViewController.title = @"Favorites";
-    favoritesViewController.view.backgroundColor = [UIColor redColor];
+    self.favoritesViewController = [[FavoritesViewController alloc] init];
     
     UITabBarController *tabBarController = [[UITabBarController alloc] init];
-    [tabBarController setViewControllers:@[feedViewController, favoritesViewController]];
+    [tabBarController setViewControllers:@[self.feedViewController, self.favoritesViewController]];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.rootViewController = tabBarController;

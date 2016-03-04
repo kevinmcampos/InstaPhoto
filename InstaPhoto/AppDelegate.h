@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FeedViewController.h"
+#import "FavoritesViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (strong, nonatomic) FeedViewController *feedViewController;
+
+@property (strong, nonatomic) FavoritesViewController *favoritesViewController;
 
 @end
 
